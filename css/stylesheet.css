@@ -9,4 +9,42 @@
   }
   
   /* Outras Media Queries conforme necessário */
-  
+
+  /* Esconda a barra de endereço no Safari */
+body {
+  padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+  padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
+}
+
+
+
+/* Esconder a barra de endereço nos navegadores móveis */
+@media screen and (max-device-width: 480px) {
+  /* Safari (iOS) e Chrome (Android) */
+  html {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+  body {
+      height: 100%;
+      overflow: auto;
+  }
+  .hide-address-bar {
+      height: auto;
+  }
+}
+
+/* Esconder a barra de endereço no Safari (macOS) */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+      .hide-address-bar {
+          padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+          padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
+      }
+  }
+}
+
+
+<body class="hide-address-bar">
+    <!-- Conteúdo da página aqui -->
+</body>
