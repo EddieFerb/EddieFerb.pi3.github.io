@@ -48,3 +48,8 @@ body {
 <body class="hide-address-bar">
     <!-- Conteúdo da página aqui -->
 </body>
+
+.icon {
+  width: 10%;
+  height: auto;
+}
