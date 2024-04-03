@@ -10,7 +10,7 @@
             },
             "previewLimit": 50,
             "server": "cadastro-de-clientes.mysql.database.azure.com",
-            "port": 3306,
+            "port": 3307,
             "driver": "MySQL",
             "name": "cadastro-de-clientes",
             "username": "PI3",
