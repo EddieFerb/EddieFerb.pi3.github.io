@@ -1,8 +1,8 @@
 <?php
 
-$dbHost = 'banco-dados-cadastro-clientes.mysql.database.azure.com';
-$dbUsername = 'brechopaio';
-$dbPassword = 'Edu1234.';
+$dbHost = 'cadastro-de-clientes.mysql.database.azure.com';
+$dbUsername = 'PI3';
+$dbPassword = 'Paio1234.';
 $dbName = 'formulario-gustavo';
 
 $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
