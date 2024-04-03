@@ -16,4 +16,13 @@ else
     echo "Conexão efetuada com sucesso";
 }
 
+// Testar a conexão com o banco de dados
+if ($conn->ping()) {
+    echo "Conexão bem-sucedida!";
+} else {
+    echo "Erro ao conectar: " . $conn->error;
+}
+
+
+
 ?>
