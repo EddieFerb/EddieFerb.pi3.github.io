@@ -4,7 +4,7 @@ $dbHost = 'cadastro-de-clientes.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234';
 $dbName = 'formulario-paio';
-$dbPort = 3307;
+$dbPort = 3306;
 
 
 $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName, $dbPort);
