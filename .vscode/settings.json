@@ -1,0 +1,22 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {
+                    "ca": "DigiCertGlobalRootCA.crt.pem"
+                }
+            },
+            "previewLimit": 50,
+            "server": "cadastro-de-clientes.mysql.database.azure.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "cadastro-de-clientes",
+            "username": "PI3",
+            "password": "Paio1234.",
+            "group": "app-movel-paio_group",
+            "database": "cadastro-de-clientes"
+        }
+    ]
+}
