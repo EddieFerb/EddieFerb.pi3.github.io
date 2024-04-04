@@ -1,30 +1,20 @@
 <?php
 
-$dbHost = 'cadastro-de-clientes.mysql.database.azure.com';
+$dbHost = 'cadastro_de_clientes.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234.';
-$dbName = 'cadastro-de-clientes';
+$dbName = 'cadastro_de_clientes';
 
-# de 'formulario-gustavo' para 'cadastro-de-clientes' #
+# de 'formulario-gustavo' para 'cadastro_de_clientes' #
 
-$conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+// Estabelecendo a conexão com o banco de dados
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-if ($conexao->connect_errno) 
-{
-    echo "Erro na conexão";
-} 
-else 
-{
+// Verificando se houve erro na conexão
+if ($conexao->connect_errno) {
+    echo "Erro na conexão: " . $conexao->connect_error;
+    exit();
+} else {
     echo "Conexão efetuada com sucesso";
 }
-
-// Testar a conexão com o banco de dados
-if ($conn->ping()) {
-    echo "Conexão bem-sucedida!";
-} else {
-    echo "Erro ao conectar: " . $conn->error;
-}
-
-
-
 ?>
