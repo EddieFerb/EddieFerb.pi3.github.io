@@ -3,9 +3,13 @@
 $dbHost = 'cadastro-de-clientes.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234';
-$dbName = 'formulario-paio';
+$dbName = 'cadastro-de-clientes';
 $dbPort = 3306;
 
+
+
+
+# de 'formulario-gustavo' para 'cadastro-de-clientes' #
 
 $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName, $dbPort);
 
