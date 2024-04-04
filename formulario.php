@@ -1,5 +1,4 @@
 <?php
-
 include_once('config.php');
 
 if(isset($_POST['submit'])) {
@@ -120,7 +119,7 @@ if(isset($_POST['submit'])) {
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco">Endereço</label>
                 </div>
-                <input type="submit" name="submit" id="submit" value="submit">
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
             </fieldset>
         </form>
     </div>
