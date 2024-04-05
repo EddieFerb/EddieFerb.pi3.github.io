@@ -1,7 +1,7 @@
 <?php
 include_once('config.php');
 
-if(isset($_POST['submit'])) {
+if(isset($_POST['enviar'])) {
     // Evitar SQL Injection usando prepared statements
     $query = "INSERT INTO clientes (nome, email, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     
@@ -119,7 +119,7 @@ if(isset($_POST['submit'])) {
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco">Endereço</label>
                 </div>
-                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                <input type="submit" name="submit" id="enviar" value="Enviar">
             </fieldset>
         </form>
     </div>
