@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 include_once('config.php');
 
-if(isset($_POST['enviar'])) {
+if(isset($_POST['submit'])) {
     // Evitar SQL Injection usando prepared statements
     $query = "INSERT INTO clientes (nome, email, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     
