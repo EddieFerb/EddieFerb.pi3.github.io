@@ -1,9 +1,10 @@
 <?php
 
-$dbHost = 'cadastro-de-clientes.mysql.database.azure.com';
+$dbHost = 'serv-paio-banco-de-dados.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234.';
-$dbName = 'cadastro_de_clientes';
+$dbName = '{your_database}';
+$port = 3306;
 
 # de 'formulario-gustavo' para 'cadastro-de-clientes' #
 

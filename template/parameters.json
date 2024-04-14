@@ -1,0 +1,93 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverName": {
+            "value": "paio-banco-de-dados"
+        },
+        "location": {
+            "value": "brazilsoutheast"
+        },
+        "serverEdition": {
+            "value": "Burstable"
+        },
+        "vCores": {
+            "value": 1
+        },
+        "storageSizeGB": {
+            "value": 20
+        },
+        "haEnabled": {
+            "value": "Disabled"
+        },
+        "firewallRules": {
+            "value": {
+                "rules": [
+                    {
+                        "name": "ClientIPAddress_2024-4-14_11-2-22",
+                        "startIPAddress": "172.225.206.116",
+                        "endIPAddress": "172.225.206.116"
+                    },
+                    {
+                        "name": "AllowAll_2024-4-14_11-2-25",
+                        "startIPAddress": "0.0.0.0",
+                        "endIPAddress": "255.255.255.255"
+                    }
+                ]
+            }
+        },
+        "backupRetentionDays": {
+            "value": 7
+        },
+        "geoRedundantBackup": {
+            "value": "Disabled"
+        },
+        "availabilityZone": {
+            "value": ""
+        },
+        "vmName": {
+            "value": "Standard_B1ms"
+        },
+        "storageIops": {
+            "value": 360
+        },
+        "storageAutogrow": {
+            "value": "Enabled"
+        },
+        "acceleratedLogs": {
+            "value": "Disabled"
+        },
+        "standbyAvailabilityZone": {
+            "value": ""
+        },
+        "autoIoScaling": {
+            "value": "Enabled"
+        },
+        "guid": {
+            "value": "19f7f7b341424d2fb7beb865079d1429"
+        },
+        "serverParameters": {
+            "value": []
+        },
+        "apiVersion": {
+            "value": "2022-09-30-preview"
+        },
+        "network": {
+            "value": {
+                "publicNetworkAccess": "Enabled"
+            }
+        },
+        "tags": {
+            "value": {}
+        },
+        "administratorLogin": {
+            "value": "PI3"
+        },
+        "administratorLoginPassword": {
+            "value": null
+        },
+        "version": {
+            "value": "8.0.21"
+        }
+    }
+}
