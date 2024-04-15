@@ -122,7 +122,7 @@ if(isset($_POST['submit'])) {
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco">Endereço</label>
                 </div>
-                <input type="submit" name="submit" id="enviar" value="Enviar">
+                <input type="submit" name="submit" id="enviar" value="submit">
             </fieldset>
         </form>
     </div>
