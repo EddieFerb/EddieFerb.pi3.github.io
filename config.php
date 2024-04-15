@@ -8,7 +8,7 @@ $port = 3306;
 
 # de 'formulario-gustavo' para 'cadastro-de-clientes' #
 
-// Estabelecendo a conexão com o banco de dados
+// Estabelecendo a conexão com o banco de dados no azure
 $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 // Verificando se houve erro na conexão
