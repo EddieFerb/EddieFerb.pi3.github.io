@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 
 # de formulario-loja-paio-brecho' para 'cadastro-de-clientes' #
 
-    $query = "INSERT INTO `cadastro-de-clientes` (nome, email, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES ('$nome', '$email', '$telefone', '$sexo', '$data_nasc', '$cidade', '$estado', '$endereco')";
+    $query = "INSERT INTO `cadastro_de_clientes` (nome, email, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES ('$nome', '$email', '$telefone', '$sexo', '$data_nasc', '$cidade', '$estado', '$endereco')";
     
     $result = mysqli_query($conexao, $query);
 

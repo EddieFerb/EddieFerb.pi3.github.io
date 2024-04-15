@@ -1,9 +1,9 @@
 <?php
 
-$dbHost = 'cadastro-de-clientes.mysql.database.azure.com';
+$dbHost = 'serv-cadastro-de-clientes.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234';
-$dbName = 'cadastro-de-clientes';
+$dbName = 'cadastro_de_clientes';
 $dbPort = 3306;
 
 

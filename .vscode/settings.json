@@ -9,14 +9,14 @@
                 }
             },
             "previewLimit": 50,
-            "server": "cadastro-de-clientes.mysql.database.azure.com",
+            "server": "serv-cadastro-de-clientes.mysql.database.azure.com",
             "port": 3306,
             "driver": "MySQL",
-            "name": "cadastro-de-clientes",
+            "name": "cadastro_de_clientes",
             "username": "PI3",
             "password": "Paio1234.",
-            "group": "app-movel-paio_group",
-            "database": "cadastro-de-clientes"
+            "group": "sqldatabase",
+            "database": "cadastro_de_clientes"
         }
     ]
 }

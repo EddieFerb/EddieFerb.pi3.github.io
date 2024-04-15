@@ -41,7 +41,7 @@ if(isset($_POST['submit']))
 
     # de 'formulario-paio' para 'cadastro-de-clientes'#
 
-    $conexao->select_db('cadastro-de-clientes');
+    $conexao->select_db('cadastro_de_clientes');
 
     $result = mysqli_query($conexao, "INSERT INTO clientes(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
 
