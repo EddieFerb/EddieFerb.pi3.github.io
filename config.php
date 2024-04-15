@@ -3,7 +3,7 @@
 $dbHost = 'serv-paio-banco-de-dados.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234.';
-$dbName = '{your_database}';
+$dbName = '{controle_de_estoque}';
 $port = 3306;
 
 # de 'formulario-gustavo' para 'cadastro-de-clientes' #
