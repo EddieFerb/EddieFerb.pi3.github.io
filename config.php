@@ -18,7 +18,7 @@ $port = 3306;
 //} else {
 //    echo "Conexão efetuada com sucesso";
 //}
-/ Estabelecendo a conexão com o banco de dados no Azure
+// Estabelecendo a conexão com o banco de dados no Azure
 $conexao = pg_connect("host=$dbHost port=$port dbname=$dbName user=$dbUsername password=$dbPassword");
 
 // Verificando se houve erro na conexão
