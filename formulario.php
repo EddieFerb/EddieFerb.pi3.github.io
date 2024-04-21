@@ -5,28 +5,31 @@ ini_set('display_errors', 1);
 include_once('config.php');
 
 if(isset($_POST['submit'])) {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    // Adicione outros campos conforme necessário
+
     // Evitar SQL Injection usando prepared statements
-    $query = "INSERT INTO clientes (nome, email, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO clientes (nome, email) VALUES ($1, $2)";
     
     // Preparar a declaração
-    if ($stmt = $conexao->prepare($query)) {
+    $result = pg_prepare($conexao, "", $query);
+    if ($result) {
         // Vincular parâmetros
-        $stmt->bind_param("ssssssss", $_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['genero'], $_POST['data_nascimento'], $_POST['cidade'], $_POST['estado'], $_POST['endereco']);
+        $result = pg_execute($conexao, "", array($nome, $email));
         
-        // Executar a declaração
-        if ($stmt->execute()) {
+        // Verificar se a inserção foi bem-sucedida
+        if ($result) {
             echo "Registro inserido com sucesso.";
         } else {
-            echo "Erro ao inserir o registro: " . $stmt->error;
+            echo "Erro ao inserir o registro: " . pg_last_error($conexao);
         }
-        
-        // Fechar a declaração
-        $stmt->close();
     } else {
-        echo "Erro na preparação da declaração: " . $conexao->error;
+        echo "Erro na preparação da declaração: " . pg_last_error($conexao);
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
