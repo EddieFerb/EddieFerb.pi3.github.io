@@ -19,11 +19,11 @@ $port = 3306;
 //    echo "Conexão efetuada com sucesso";
 //}
 // Estabelecendo a conexão com o banco de dados no Azure
-$conexao = pg_connect("host=$dbHost port=$port dbname=$dbName user=$dbUsername password=$dbPassword");
+$conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName, $port);
 
 // Verificando se houve erro na conexão
-if (!$conexao) {
-    echo "Erro na conexão: " . pg_last_error($conexao);
+if (mysqli_connect_errno()) {
+    echo "Erro na conexão: " . mysqli_connect_error();
     exit();
 } else {
     echo "Conexão efetuada com sucesso";

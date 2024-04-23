@@ -2,40 +2,26 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Configurações do ClearDB MySQL
-$db_host = "us-cdbr-east-01.cleardb.com";
-$db_user = "bd4484bc4707c1";
-$db_pass = "f6c56a50";
-$db_name = "heroku_9076c04e8309ddd";
+include_once('config.php');
 
-// Conexão com o banco de dados MySQL
-$conexao = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-if (!$conexao) {
-    die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
-}
-
-// Verificar se o formulário foi enviado
 if(isset($_POST['submit'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
+    // Adicione outros campos conforme necessário
 
     // Evitar SQL Injection usando prepared statements
     $query = "INSERT INTO clientes (nome, email) VALUES (?, ?)";
     
     // Preparar a declaração
-    $stmt = mysqli_prepare($conexao, $query);
-    if ($stmt) {
+    if ($stmt = mysqli_prepare($conexao, $query)) {
         // Vincular parâmetros
         mysqli_stmt_bind_param($stmt, "ss", $nome, $email);
         
         // Executar a declaração
-        $result = mysqli_stmt_execute($stmt);
-        
-        // Verificar se a inserção foi bem-sucedida
-        if ($result) {
+        if (mysqli_stmt_execute($stmt)) {
             echo "Registro inserido com sucesso.";
         } else {
-            echo "Erro ao inserir o registro: " . mysqli_error($conexao);
+            echo "Erro ao inserir o registro: " . mysqli_stmt_error($stmt);
         }
         
         // Fechar a declaração
@@ -45,6 +31,7 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -110,7 +97,37 @@ if(isset($_POST['submit'])) {
                     <label for="email">E-mail</label>
                 </div>
                 <br><br>
-                <!-- Adicione outros campos conforme necessário -->
+                <div class="inputBox">
+                    <input type="text" name="telefone" class="inputUser" required>
+                    <label for="telefone">Telefone</label>
+                </div>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>   
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <div class="inputBox">
+                    <br><br>
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade">Cidade</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado">Estado</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco">Endereço</label>
+                </div>
                 <input type="submit" name="submit" id="enviar" value="submit">
             </fieldset>
         </form>
