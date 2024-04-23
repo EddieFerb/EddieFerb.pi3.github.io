@@ -18,7 +18,6 @@ if (!$conexao) {
 if(isset($_POST['submit'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    // Adicione outros campos conforme necessário
 
     // Evitar SQL Injection usando prepared statements
     $query = "INSERT INTO clientes (nome, email) VALUES (?, ?)";
@@ -111,37 +110,7 @@ if(isset($_POST['submit'])) {
                     <label for="email">E-mail</label>
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="telefone" class="inputUser" required>
-                    <label for="telefone">Telefone</label>
-                </div>
-                <p>Sexo:</p>
-                <input type="radio" id="feminino" name="genero" value="feminino" required>
-                <label for="feminino">Feminino</label>
-                <input type="radio" id="masculino" name="genero" value="masculino" required>
-                <label for="masculino">Masculino</label>   
-                <input type="radio" id="outro" name="genero" value="outro" required>
-                <label for="outro">Outro</label>
-                <div class="inputBox">
-                    <br><br>
-                    <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade">Cidade</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="estado" id="estado" class="inputUser" required>
-                    <label for="estado">Estado</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco">Endereço</label>
-                </div>
+                <!-- Adicione outros campos conforme necessário -->
                 <input type="submit" name="submit" id="enviar" value="submit">
             </fieldset>
         </form>
