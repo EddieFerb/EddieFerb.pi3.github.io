@@ -1,9 +1,9 @@
 <?php
 
-$dbHost = 'serv-paio-banco-de-dados.postgres.database.azure.com';
-$dbUsername = 'PI3';
-$dbPassword = 'Paio1234.';
-$dbName = 'clientes';
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'formulario-paio';
 $port = 3306;
 
 # de 'formulario-gustavo' para 'cadastro-de-clientes' #
