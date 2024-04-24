@@ -10,7 +10,7 @@ if(isset($_POST['submit'])) {
     // Adicione outros campos conforme necessário
 
     // Evitar SQL Injection usando prepared statements
-    $query = "INSERT INTO clientes (nome, email) VALUES (?, ?)";
+    $query = "INSERT INTO new_tableclientes (nome, email) VALUES (?, ?)";
     
     // Preparar a declaração
     if ($stmt = mysqli_prepare($conexao, $query)) {
