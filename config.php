@@ -6,8 +6,19 @@ $dbPassword = 'Paio1234.';
 $dbName = 'formulario-paio';
 $port = 3306;
 
-// Estabelecer a conexão com o banco de dados no Azure sem SSL/TLS
-$conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName, $port);
+// Caminho para o certificado CA
+$sslCa = '/Users/eddieferb/Desktop/EddieFerb.github.io/DigiCertGlobalRootCA.crt.pem';
+
+// Configurações SSL/TLS
+$sslOptions = array(
+    "sslmode" => MYSQLI_SSL_MODE_REQUIRED,
+    "sslca" => $sslCa
+);
+
+// Estabelecer a conexão com o banco de dados no Azure com opções de SSL
+$conexao = mysqli_init();
+mysqli_ssl_set($conexao, NULL, NULL, $sslCa, NULL, NULL);
+mysqli_real_connect($conexao, $dbHost, $dbUsername, $dbPassword, $dbName, $port, NULL, $sslOptions);
 
 // Verificar se houve erro na conexão
 if (mysqli_connect_errno()) {
