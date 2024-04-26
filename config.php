@@ -1,8 +1,8 @@
 <?php
 
-$dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
+$dbHost = 'server-paio-pi3.mysql.database.azure.com';
+$dbUsername = 'PI3';
+$dbPassword = 'Paio1234.';
 $dbName = 'formulario-paio';
 $port = 3306;
 
