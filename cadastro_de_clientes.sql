@@ -9,3 +9,4 @@ CREATE TABLE clientes (
     estado VARCHAR(2) NOT NULL,
     endereco VARCHAR(255) NOT NULL
 );
+

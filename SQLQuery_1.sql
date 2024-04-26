@@ -1,3 +1,1 @@
-SELECT *
-FROM clientes
-LIMIT 5;
+SELECT 'Conexão bem-sucedida' AS Status;
