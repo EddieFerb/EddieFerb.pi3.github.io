@@ -1,22 +1,3 @@
 {
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Enabled",
-                "ssl": {
-                    "ca": "DigiCertGlobalRootCA.crt.pem"
-                }
-            },
-            "previewLimit": 50,
-            "server": "serv-cadastro-de-clientes.mysql.database.azure.com",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "cadastro_de_clientes",
-            "username": "PI3",
-            "password": "Paio1234.",
-            "group": "sqldatabase",
-            "database": "cadastro_de_clientes"
-        }
-    ]
+    "sqltools.connections": []
 }
