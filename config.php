@@ -16,7 +16,7 @@ $port = 3306;
 //    echo "Erro na conexão: " . $conexao->connect_error;
 //    exit();
 //} else {
-//    echo "Conexão efetuada com sucesso";
+//    echo "Conexão efetuada com sucesso"; 
 //}
 // Estabelecendo a conexão com o banco de dados no Azure
 $conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName, $port);
