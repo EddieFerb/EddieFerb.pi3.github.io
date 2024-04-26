@@ -1,9 +1,9 @@
 <?php
 
-$dbHost = 'serv-paio-banco-de-dados.postgres.database.azure.com';
+$dbHost = 'server-paio-pi3.mysql.database.azure.com';
 $dbUsername = 'PI3';
 $dbPassword = 'Paio1234.';
-$dbName = 'clientes';
+$dbName = 'formulario-paio';
 $port = 3306;
 
 # de 'formulario-gustavo' para 'cadastro-de-clientes' #
@@ -16,14 +16,14 @@ $port = 3306;
 //    echo "Erro na conexão: " . $conexao->connect_error;
 //    exit();
 //} else {
-//    echo "Conexão efetuada com sucesso";
+//    echo "Conexão efetuada com sucesso"; 
 //}
 // Estabelecendo a conexão com o banco de dados no Azure
-$conexao = pg_connect("host=$dbHost port=$port dbname=$dbName user=$dbUsername password=$dbPassword");
+$conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName, $port);
 
 // Verificando se houve erro na conexão
-if (!$conexao) {
-    echo "Erro na conexão: " . pg_last_error($conexao);
+if (mysqli_connect_errno()) {
+    echo "Erro na conexão: " . mysqli_connect_error();
     exit();
 } else {
     echo "Conexão efetuada com sucesso";
