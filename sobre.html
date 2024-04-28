@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -8,12 +9,51 @@
   <meta name="author" content="Eduardo Fernandes Bueno (Eddie Ferb)">
   <title>Loja Paió Brechó | Sobre</title>
   <link rel="stylesheet" href="css/stylesheet.css">
+  <style>
+    /* Esconde a barra de endereço nos navegadores móveis */
+    @media screen and (max-width: 768px) {
+      body {
+        padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+        padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
+        overflow: auto;
+      }
+    }
+
+    /* Esconde a barra de endereço no Safari (macOS) */
+    @media not all and (min-resolution:.001dpcm) {
+      @supports (-webkit-appearance:none) {
+        body {
+          padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+          padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
+        }
+      }
+    }
+    
+    /* Estilos para os ícones das redes sociais */
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    .social-link {
+      margin-left: 10px;
+    }
+    
+    .social-link img {
+      width: 30px;
+      height: auto;
+    }
+  </style>
 </head>
+
 <body class="hide-address-bar">
   <header>
     <div class="content">
       <div id="branding">
-        <h1><span class="highliht">Loja Paió</span> Brechó</h1>
+        <a href="index.html">
+          <img src="img/logo_paio.png" alt="Logo da Loja Paió Brechó" class="responsive-image">
+        </a>
       </div>
       <nav>
         <ul>
@@ -21,15 +61,23 @@
           <li class="current"><a href="sobre.html">SOBRE</a></li>
           <li><a href="produtos.html">PRODUTOS</a></li>
           <li><a href="quero_vender.html">QUERO VENDER</a></li>
-          <li><a href="tela_de_login.html">ÁREA DO ADMINISTRADOR</a></li>
-
-
-
-
-
-
+          <li><a href="tela_de_login.html">ÁREA DA ADMINISTRAÇÃO</a></li>
         </ul>
       </nav>
+      <div class="social-icons">
+        <a href="https://web.whatsapp.com/send?phone=5515996440365" class="social-link whatsapp" target="_blank">
+          <img src="img/whats.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/paio_brecho_/" class="social-link instagram" target="_blank">
+          <img src="img/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/paiobrecho" class="social-link facebook" target="_blank">
+          <img src="img/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com/@paiobrecho1448/featured" class="social-link youtube" target="_blank">
+          <img src="img/youtube.png" alt="YouTube">
+        </a>
+      </div>
     </div>
   </header>
 
@@ -69,4 +117,5 @@
     <h3>2023 Copyright © Loja Paió Brechó</h3>
   </footer>
 </body>
+
 </html>

@@ -1,53 +1,51 @@
 /* Estilos para dispositivos com largura de tela menor ou igual a 768px */
 @media screen and (max-width: 768px) {
-    /* Estilos aqui */
-  }
-  
-  /* Estilos para dispositivos com largura de tela entre 769px e 1024px */
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Estilos aqui */
-  }
-  
-  /* Outras Media Queries conforme necessário */
+  /* Estilos aqui */
+}
 
-  /* Esconda a barra de endereço no Safari */
+/* Estilos para dispositivos com largura de tela entre 769px e 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos aqui */
+}
+
+/* Outras Media Queries conforme necessário */
+
+/* Esconda a barra de endereço no Safari */
 body {
   padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
   padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
 }
 
-
-
 /* Esconder a barra de endereço nos navegadores móveis */
 @media screen and (max-device-width: 480px) {
   /* Safari (iOS) e Chrome (Android) */
   html {
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
   body {
-      height: 100%;
-      overflow: auto;
+    height: 100%;
+    overflow: auto;
   }
   .hide-address-bar {
-      height: auto;
+    height: auto;
   }
 }
 
 /* Esconder a barra de endereço no Safari (macOS) */
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {
-      .hide-address-bar {
-          padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-          padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
-      }
+    .hide-address-bar {
+      padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+      padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
+    }
   }
 }
 
-
-<body class="hide-address-bar">
-    <!-- Conteúdo da página aqui -->
-</body>
+.responsive-image {
+  max-width: 20%;
+  height: auto;
+}
 
 .icon {
   width: 10%;
