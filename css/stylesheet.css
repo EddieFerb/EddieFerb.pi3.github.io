@@ -42,11 +42,13 @@ body {
   }
 }
 
+/* Estilos para a imagem responsiva */
 .responsive-image {
   max-width: 20%;
   height: auto;
 }
 
+/* Estilos para os ícones */
 .icon {
   width: 10%;
   height: auto;
