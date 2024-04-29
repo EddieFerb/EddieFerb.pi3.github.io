@@ -1,5 +1,4 @@
 <?php
-
 // Importar a constante MYSQLI_SSL_MODE_REQUIRED manualmente
 if (!defined('MYSQLI_SSL_MODE_REQUIRED')) {
     define('MYSQLI_SSL_MODE_REQUIRED', 1);
@@ -32,5 +31,4 @@ if (mysqli_connect_errno()) {
 }
 
 // Restante do seu código aqui...
-
 ?>
