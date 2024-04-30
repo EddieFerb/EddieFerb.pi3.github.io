@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Loja Paió Brechó">
-  <meta name="description" content="produtos de qualidade e custo baixo">
   <meta name="author" content="Eduardo Fernandes Bueno (Eddie Ferb)">
   <title>Loja Paió | Brechó Index</title>
   <link rel="stylesheet" href="css/stylesheet.css">
@@ -53,95 +52,164 @@
       text-decoration: none;
       color: black;
     }
+
+    /* Estilos para o carrossel */
+    .foto-produtos {
+      overflow: hidden; /* Para esconder as imagens fora da tela */
+      position: relative; /* Para definir a posição dos slides */
+      width: 100%; /* Para garantir que o carrossel ocupe todo o espaço disponível */
+    }
+
+    .slider {
+      display: flex; /* Para alinhar os slides em linha */
+      transition: transform 0.8s ease; /* Transição suave entre os slides */
+    }
+
+    .slide {
+      min-width: 100%; /* Para garantir que cada slide ocupe toda a largura */
+    }
+
+    .slide img {
+      width: 100%; /* Para garantir que a imagem ocupe toda a largura do slide */
+      height: auto; /* Para manter a proporção da imagem */
+    }
   </style>
 </head>
-<body>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then(registration => {
-            console.log('Service Worker registrado com sucesso:', registration);
-          })
-          .catch(error => {
-            console.log('Falha ao registrar o Service Worker:', error);
-          });
-      });
-    }
-  </script>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <header>
-    <div class="content">
-      <div id="branding">
-        <img src="img/logo_paio.png" alt="Logo da Loja Paió Brechó" class="responsive-image">
-      </div>
-      <!-- Menu retrátil no canto superior direito -->
-      <nav>
-        <ul>
-          <li class="current"><a href="index.html">INÍCIO</a></li>
-          <li><a href="sobre.html">SOBRE</a></li>
-          <li><a href="produtos.html">PRODUTOS</a></li>
-          <li><a href="quero_vender.html">QUERO VENDER</a></li>
-          <li><a href="tela_de_login.html">ÁREA DA ADMINISTRAÇÃO</a></li>
-        </ul>
-      </nav>
+<body style="background-color: #fff;"> <!-- Adicionando estilo de fundo dinâmico -->
+
+<script>
+  // Código do Service Worker...
+</script>
+
+<header>
+  <div class="content">
+    <div id="branding">
+      <img src="img/logo_paio.png" alt="Logo da Loja Paió Brechó" class="responsive-image">
     </div>
-  </header>
-  
-  <section id="showcase">
-    <div class="container">
-      <h1>Loja Paió Brechó</h1> 
-      <p>
-        Loja com muita tradição em toda região, oferece produtos de excelente qualidade para quem tem classe, personalidade e bom gosto.<br>
-        Participe das Lives para ficar por dentro das novidades.
-      </p>
-      <h3>
-        Sigam nas redes sociais!
-      </h3>
+    <!-- Menu retrátil no canto superior direito -->
+    <nav>
+      <ul>
+        <li class="current"><a href="index.html">INÍCIO</a></li>
+        <li><a href="produtos.html">PRODUTOS</a></li>
+        <li><a href="quero_vender.html">QUERO VENDER</a></li>
+        <li><a href="tela_de_login.html">ÁREA DA ADMINISTRAÇÃO</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="showcase">
+  <div class="container">
+    <p>
+      A loja <b>Paió Brechó</b> tem muita tradição em toda região, oferece vários produtos de excelente qualidade, novos e usados,  para quem tem classe, personalidade e bom gosto.<br>
+      Sigam nas redes sociais. Participe das Lives para ficar por dentro das novidades.
+    </p>
+    <h4>ROUPAS & BRINQUEDOS</h4>
+  </div>
+</section>
+
+<center>
+  <section class="foto-produtos">
+    <div class="slider">
+      <div class="slide">
+        <img src="img/roupas.jpeg" alt="Roupas">
+      </div>
+      <div class="slide">
+        <img src="img/brinquedos_1.jpg" alt="Brinquedos">
+      </div>
+      <div class="slide">
+        <img src="img/calçados.jpeg" alt="Calçados">
+      </div>
+      <div class="slide">
+        <img src="img/moda_masculina.jpg" alt="Moda Masculina">
+      </div>
+      <div class="slide">
+        <img src="img/moda_feminina.jpeg" alt="Moda Feminina">
+      </div>
+      <div class="slide">
+        <img src="img/moda_infantil_2.jpeg" alt="Moda Infantil">
+      </div>
+      <div class="slide">
+        <img src="img/miniaturas_2.jpeg" alt="Miniaturas">
+      </div>
+      <div class="slide">
+        <img src="img/jogo_4.jpeg" alt="Jogo">
+      </div>
+      <div class="slide">
+        <img src="img/pelucia.jpeg" alt="Pelúcia">
+      </div>
     </div>
   </section>
-  <center>
-    <img src="tes.jpg" class="img-responsive" alt="Fachada da loja com manequins expostos">
-  </center>
-  <footer>
-    <section id="foto_box">
-      <div class="container">
-        <h2>Loja Paió Brechó MEI</h2>
-        <p>Rua Nove de Julho, 207 | Centro | Capão Bonito | SP | CEP 18300-050</p>
-      </div>
-      <div>
-      </div>
-    </section>
-    <h3>2023 © Loja Paió Brechó</h3>
-  </footer>
-
-  <!-- Ícones Sociais Responsivos -->
-  <div class="social-icons">
-    <a href="https://web.whatsapp.com/send?phone=5515996440365" class="social-link whatsapp" target="_blank">
-      <img src="img/whats.svg" alt="WhatsApp">
-    </a>
-    <a href="https://www.instagram.com/paio_brecho_/" class="social-link instagram" target="_blank">
-      <img src="img/instagram.svg" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/paiobrecho" class="social-link facebook" target="_blank">
-      <img src="img/facebook.svg" alt="Facebook">
-    </a>
-    <a href="https://www.youtube.com/@paiobrecho1448/featured" class="social-link youtube" target="_blank">
-      <img src="img/youtube.png" alt="YouTube">
-    </a>   
+</center>
+<section id="main">
+  <div class="container">
+    <article id="main-col">
+      <h4 class="page-title">PAIO BRECHÓ ROUPAS E BRINQUEDOS</h4>
+    
+        <p>Há mais de 20 anos a nossa loja é o melhor lugar para comprar roupa de qualidade! Aqui você tem estoque sempre atualizado, com todos os tamanhos e cores para você escolher à vontade. Se precisa de roupa, você precisa vir aqui!</p>
+        <p>Para os clientes que estão procurando uma loja de roupas boas e baratas, aqui é o melhor lugar! Temos variedade de cores e tecidos, sempre seguindo a moda da estação. Para melhorar, estamos com ofertas imperdíveis que vão te ajudar a dar aquela atualizada no guarda-roupa. Venha aproveitar!</p>
+        <p>Pensando em moda sustentável nossa loja é uma boa opção, pois vestir-se de brechó é despir-se de preconceitos.</p>
+        <p>O brechó é muito além de um consumo consciente que promove mudanças significativas para o meio ambiente, pois ele nos possibilita ressignificar a forma como lidamos com o todo.</p>
+        <p>O consumo consciente é sobre estar a favor da vida, a liberdade de ser e respeitando a singularidade de cada um. O Paió Brechó une tudo isso!</p>
+      
+    </article>
   </div>
+</section>
+<footer>
+  <section id="foto_box">
+    <div class="container">
+      <h2>Loja Paió Brechó MEI</h2>
+      <p>Rua Nove de Julho, 207 | Centro | Capão Bonito | SP | CEP 18300-050</p>
+    </div>
+    <div></div>
+  </section>
+  <h3>2023 © Loja Paió Brechó</h3>
+</footer>
 
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId            : 'your-app-id',
-        xfbml            : true,
-        version          : 'v18.0'
-      });
-    };
-  </script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<!-- Ícones Sociais Responsivos -->
+<div class="social-icons">
+  <a href="https://web.whatsapp.com/send?phone=5515996440365" class="social-link whatsapp" target="_blank">
+    <img src="img/whats.svg" alt="WhatsApp">
+  </a>
+  <a href="https://www.instagram.com/paio_brecho_/" class="social-link instagram" target="_blank">
+    <img src="img/instagram.svg" alt="Instagram">
+  </a>
+  <a href="https://www.facebook.com/paiobrecho" class="social-link facebook" target="_blank">
+    <img src="img/facebook.svg" alt="Facebook">
+  </a>
+  <a href="https://www.youtube.com/@paiobrecho1448/featured" class="social-link youtube" target="_blank">
+    <img src="img/youtube.png" alt="YouTube">
+  </a>
+</div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'your-app-id',
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+  };
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+<!-- Script para controlar o carrossel -->
+<script>
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Troca de slide a cada 5 segundos
+  }
+</script>
+
 </body>
 </html>

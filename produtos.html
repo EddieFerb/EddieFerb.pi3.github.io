@@ -63,7 +63,6 @@
       <nav>
         <ul>
           <li><a href="index.html">INÍCIO</a></li>
-          <li><a href="sobre.html">SOBRE</a></li>
           <li class="current"><a href="produtos.html">PRODUTOS</a></li>
           <li><a href="quero_vender.html">QUERO VENDER</a></li>
           <li><a href="tela_de_login.html">ÁREA DA ADMINISTRAÇÃO</a></li>
@@ -86,86 +85,90 @@
     </div>
   </header>
 
-  <section class="foto-produtos">
-    <div class="slider">
-      <div class="slides">
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-        <input type="radio" name="radio-btn" id="radio5">
-        <input type="radio" name="radio-btn" id="radio6">
-        <input type="radio" name="radio-btn" id="radio7">
-        <input type="radio" name="radio-btn" id="radio8">
-        <input type="radio" name="radio-btn" id="radio9">
-
-        <div class="slide first">
-          <img src="img/roupas.jpeg" alt="Roupas" />
-        </div>
-        <div class="slide ">
-          <img src="img/brinquedos_1.jpg" alt="Brinquedos" />
-        </div>
-        <div class="slide ">
-          <img src="img/calçados.jpeg" alt="Calçados" />
-        </div>
-        <div class="slide ">
-          <img src="img/moda_masculina.jpg" alt="Moda Masculina" />
-        </div>
-        <div class="slide ">
-          <img src="img/moda_feminina.jpeg" alt="Moda Feminina" />
-        </div>
-        <div class="slide ">
-          <img src="img/moda_infantil_2.jpeg" alt="Moda Infantil" />
-        </div>
-        <div class="slide ">
-          <img src="img/miniaturas_2.jpeg" alt="Miniaturas" />
-        </div>
-        <div class="slide ">
-          <img src="img/jogo_4.jpeg" alt="Miniaturas" />
-        </div>
-        <div class="slide ">
-          <img src="img/pelucia.jpeg" alt="Pelúcia" />
-        </div>
-
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-          <div class="auto-btn5"></div>
-          <div class="auto-btn6"></div>
-          <div class="auto-btn7"></div>
-          <div class="auto-btn8"></div>
-          <div class="auto-btn9"></div>
-        </div>
-      </div>
-
-      <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-        <label for="radio5" class="manual-btn"></label>
-        <label for="radio6" class="manual-btn"></label>
-        <label for="radio7" class="manual-btn"></label>
-        <label for="radio8" class="manual-btn"></label>
-        <label for="radio9" class="manual-btn"></label>
-      </div>
+  <section id="showcase">
+    <div class="container">
+      <h4>ROUPAS & BRINQUEDOS</h4>
     </div>
-    <script src="script.js"></script>
   </section>
-
+  <center>
+    <section class="foto-produtos">
+      <div class="slider">
+        <div class="slide">
+          <img src="img/roupas.jpeg" alt="Roupas">
+        </div>
+        <div class="slide">
+          <img src="img/brinquedos_1.jpg" alt="Brinquedos">
+        </div>
+        <div class="slide">
+          <img src="img/calçados.jpeg" alt="Calçados">
+        </div>
+        <div class="slide">
+          <img src="img/moda_masculina.jpg" alt="Moda Masculina">
+        </div>
+        <div class="slide">
+          <img src="img/moda_feminina.jpeg" alt="Moda Feminina">
+        </div>
+        <div class="slide">
+          <img src="img/moda_infantil_2.jpeg" alt="Moda Infantil">
+        </div>
+        <div class="slide">
+          <img src="img/miniaturas_2.jpeg" alt="Miniaturas">
+        </div>
+        <div class="slide">
+          <img src="img/jogo_4.jpeg" alt="Jogo">
+        </div>
+        <div class="slide">
+          <img src="img/pelucia.jpeg" alt="Pelúcia">
+        </div>
+      </div>
+    </section>
+  </center>
+  <section id="showcase">
+    <div class="container">
+      <h4>Não encontrou o que procura? Entre em contato pelas redes sociais ou vá na loja física ver os produtos.</h4>
+    </div>
+  </section>
   <footer>
     <section id="foto_box">
       <div class="container">
         <h2>Loja Paió Brechó MEI</h2>
         <p>Rua Nove de Julho, 207 | Centro | Capão Bonito | SP | CEP 18300-050</p>
       </div>
-      <div>
-      </div>
+      <div></div>
     </section>
     <h3>2023 © Loja Paió Brechó</h3>
   </footer>
-</body>
+  
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : 'your-app-id',
+        xfbml            : true,
+        version          : 'v18.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  
+  <!-- Script para controlar o carrossel -->
+  <script>
+    var slideIndex = 0;
+    carousel();
+  
+    function carousel() {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 5000); // Troca de slide a cada 5 segundos
+    }
+  </script>
+  
+  </body>
+  </html>
+  
 
-</html>
