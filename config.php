@@ -21,7 +21,8 @@ $sslCa = '/Users/eddieferb/Desktop/EddieFerb.github.io/DigiCertGlobalRootCA.crt.
 // Estabelecer a conexão com o banco de dados no Azure com opções de SSL
 $con = mysqli_init();
 mysqli_ssl_set($con, NULL, NULL,'/Users/eddieferb/Desktop/EddieFerb.github.io/DigiCertGlobalRootCA.crt.pem', NULL, NULL);
-mysqli_real_connect($con, "server-paio-pi3.mysql.database.azure.com", "PI3", "Paio1234.", "formulario-paio", 3306, MYSQLI_CLIENT_SSL);
+$mysqli = new mysqli('server-paio-pi3.mysql.database.azure.com', 'PI3', 'Paio1234.', 'formulario-paio', 3306, '/home/site/wwwroot/DigiCertGlobalRootCA.crt.pem');
+
 
 // Verificar se houve erro na conexão
 if (mysqli_connect_errno()) {
