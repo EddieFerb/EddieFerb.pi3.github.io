@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
   database: 'formulario-paio',
   port: 3306,
   ssl: {
-    ca: fs.readFileSync('/Users/eddieferb/Desktop/EddieFerb.github.io/DigiCertGlobalRootCA.crt.pem')
+    ca: fs.readFileSync('/Users/eddieferb/Desktop/EddieFerb.github.io')
   }
 });
 
