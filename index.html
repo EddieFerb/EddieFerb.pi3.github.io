@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="manifest" href="manifest.json">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C6047EJ91L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C6047EJ91L');
+</script>
+
   <style>
     /* Novas classes para os ícones sociais */
     .social-icons {
@@ -51,27 +61,6 @@
     nav ul li a {
       text-decoration: none;
       color: black;
-    }
-
-    /* Estilos para o carrossel */
-    .foto-produtos {
-      overflow: hidden; /* Para esconder as imagens fora da tela */
-      position: relative; /* Para definir a posição dos slides */
-      width: 100%; /* Para garantir que o carrossel ocupe todo o espaço disponível */
-    }
-
-    .slider {
-      display: flex; /* Para alinhar os slides em linha */
-      transition: transform 0.8s ease; /* Transição suave entre os slides */
-    }
-
-    .slide {
-      min-width: 100%; /* Para garantir que cada slide ocupe toda a largura */
-    }
-
-    .slide img {
-      width: 100%; /* Para garantir que a imagem ocupe toda a largura do slide */
-      height: auto; /* Para manter a proporção da imagem */
     }
   </style>
 </head>
@@ -181,35 +170,6 @@
     <img src="img/youtube.png" alt="YouTube">
   </a>
 </div>
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : 'your-app-id',
-      xfbml            : true,
-      version          : 'v18.0'
-    });
-  };
-</script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
-<!-- Script para controlar o carrossel -->
-<script>
-  var slideIndex = 0;
-  carousel();
-
-  function carousel() {
-    var i;
-    var slides = document.getElementsByClassName("slide");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 5000); // Troca de slide a cada 5 segundos
-  }
-</script>
 
 </body>
 </html>
