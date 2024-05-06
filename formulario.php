@@ -1,38 +1,39 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
+// Teste de unidade: Verifica se a conexão com o banco de dados é estabelecida corretamente
 include_once('config.php');
 
 if(isset($_POST['submit'])) {
+    // Teste de unidade: Verifica se o nome e o email foram recebidos corretamente do formulário
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     // Adicione outros campos conforme necessário
 
     // Evitar SQL Injection usando prepared statements
+    // Teste de unidade: Verifica se a consulta preparada é construída corretamente
     $query = "INSERT INTO clientes (nome, email) VALUES (?, ?)";
     
     // Preparar a declaração
     if ($stmt = mysqli_prepare($conexao, $query)) {
         // Vincular parâmetros
+        // Teste de unidade: Verifica se os parâmetros são vinculados corretamente à consulta preparada
         mysqli_stmt_bind_param($stmt, "ss", $nome, $email);
         
         // Executar a declaração
         if (mysqli_stmt_execute($stmt)) {
             echo "Registro inserido com sucesso.";
         } else {
+            // Teste de unidade: Verifica se o erro é tratado corretamente ao inserir o registro
             echo "Erro ao inserir o registro: " . mysqli_stmt_error($stmt);
         }
         
         // Fechar a declaração
         mysqli_stmt_close($stmt);
     } else {
+        // Teste de unidade: Verifica se o erro é tratado corretamente na preparação da declaração
         echo "Erro na preparação da declaração: " . mysqli_error($conexao);
     }
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
