@@ -56,7 +56,7 @@ if(isset($_POST['submit']))
     <title>Formulário Cadastro de Clientes | GN</title>
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica;
             background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
         }
         .box{
